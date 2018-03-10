@@ -48,7 +48,7 @@ function Game() {
 
 	this.destroyMeteor= function(i){
 
-		
+		this.score += 5; 
 		this.meteors.splice(i, 1);
 		this.nbMeteors--;
 	}

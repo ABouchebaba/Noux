@@ -22,9 +22,12 @@ function setup() {
 
 function draw(){
 	background(back);
-
-//background(255, 255, 255);
+	
+	//background(255, 255, 255);
 	if(!game.gameLost){
+		textSize(32);
+		fill(0, 102, 153);
+		text(game.score,30,30);
 		controlVaisseau();
 
 		for (var i = 0; i < game.nbMeteors; i++) {
@@ -47,6 +50,11 @@ function draw(){
 		
 		
 		game.detectCollision();
+	}else{
+		textSize(32);
+		fill(0, 102, 153);
+		text("GAME OVER ",width/2 - 100,height/2);
+		text("Score :  " + game.score,width/2 - 100,height/2 + 50);
 	}
 	
 }
